@@ -6,7 +6,7 @@ const CampsitesList = () => {
 	return (
 		<Row className="ms-auto">
 			{CAMPSITES.map((campsite) => (
-				<Col md="5" ClassName="m-4" key={campsite.id}>
+				<Col md="5" className="m-4" key={campsite.id}>
 					<CampsiteCard campsite={campsite} />
 				</Col>
 			))}
@@ -14,4 +14,4 @@ const CampsitesList = () => {
 	);
 };
 
-export default CampsitesList
+export default CampsitesList;
