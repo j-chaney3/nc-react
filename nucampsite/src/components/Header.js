@@ -5,7 +5,6 @@ import {
 	Collapse,
 	NavbarToggler,
 	Nav,
-	Navitem,
 	NavItem,
 } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
