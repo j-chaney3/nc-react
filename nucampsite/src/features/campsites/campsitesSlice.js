@@ -13,19 +13,24 @@ const campsiteSlice = createSlice({
 
 export const campsitesReducer = campsiteSlice.reducer;
 
-export const selectAllCampsites = () => {
-	return CAMPSITES;
-};
 
+
+//random campsite
 // export const selectRandomCampsite = () => {
 //     return CAMPSITES[Math.floor(CAMPSITES.length * Math.random())];
 // }
 
-
-export const selectCampsiteById = (id) => {
-    return CAMPSITES.find((campsite) => campsite.id === parseInt(id));
+export const selectAllCampsites = (state) => {
+	return state.campsites.campsitesArray
 };
 
-export const selectFeaturedCampsite = () => {
-    return CAMPSITES.find((campsite) => campsite.featured);
+//id => callback state function 
+export const selectCampsiteById = (id) => (state) => {
+    return state.campsites.campsitesArray.find(
+        (campsite) => campsite.id === parseInt(id)
+    );
+};
+
+export const selectFeaturedCampsite = (state) => {
+    return state.campsites.campsitesArray.find((campsite) => campsite.featured);
 }
