@@ -24,7 +24,7 @@ export const selectAllCampsites = (state) => {
 	return state.campsites.campsitesArray
 };
 
-//id => callback state function 
+//id =>  state function 
 export const selectCampsiteById = (id) => (state) => {
     return state.campsites.campsitesArray.find(
         (campsite) => campsite.id === parseInt(id)
