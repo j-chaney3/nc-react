@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import { Button, Modal, ModalBody, ModalHeader, FormGroup, Label } from 'reactstrap';
 import {Formik, Field, Form, ErrorMessage} from 'formik';
 import { validateCommentForm } from "../../utils/validateCommentForm";
-import { addComment } from "./commentsSLice";
+import { addComment } from "./commentsSlice";
 
 const CommentForm = ({campsiteId}) => {
     const [modalOpen, setModalOpen] = useState(false);
