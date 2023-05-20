@@ -11,7 +11,7 @@ const CommentsList = ({ campsiteId }) => {
 	const isLoading = useSelector((state)=> state.comments.isLoading);
 	const errMsg = useSelector((state) => state.comments.errMsg);
 
-
+//check 
 	if(isLoading) {
 		return (
 			<Row>
@@ -25,7 +25,7 @@ const CommentsList = ({ campsiteId }) => {
 				<Error errMsg={errMsg} /> 
 			</Row>
 		)
-	}
+	} 
 
 	if (comments && comments.length > 0) {
 		return (

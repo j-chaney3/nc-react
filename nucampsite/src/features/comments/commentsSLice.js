@@ -3,7 +3,7 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import { baseUrl } from '../../app/shared/baseUrl';
 
 
-
+//get comments
 export const fetchComments = createAsyncThunk(
     'comments/fetchComments',
     async () => {
@@ -17,14 +17,15 @@ export const fetchComments = createAsyncThunk(
         return data;    
     }
 );
-
+//post comments
 export const postComment = createAsyncThunk(
     'comments/postComments',
     async(comment, {dispatch}) => {
         const response = await fetch(baseUrl+'comments', {
             method: 'POST',
             body: JSON.stringify(comment),
-            headers: {'Content-Type:':'application/json'}
+            headers: {'Content-Type': 'application/json'}
+
         })
         if(!response.ok) {
             return Promise.reject(
@@ -37,7 +38,7 @@ export const postComment = createAsyncThunk(
         //return data;
         
     }
-)
+);
 
 const initialState = {
     commentsArray: [],
